@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobcat Operator Verification System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Bobcat Operator Verification</h1>
+      <p>Training / Authorization Status Check</p>
+    </div>
+    <span class="badge">BBE Audit Prototype</span>
+  </header>
+
+  <main class="container">
+    <section class="search-panel">
+      <h2>Verify Operator</h2>
+      <p class="hint">Search by Operator ID or Name. Example: <b>BBE-BO-001</b>, <b>Gokul</b></p>
+
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="Enter Operator ID or Name" />
+        <button onclick="searchOperator()">Search</button>
+        <button class="secondary" onclick="showAllOperators()">Show All</button>
+      </div>
+    </section>
+
+    <section id="result" class="result-grid"></section>
+  </main>
+
+  <footer>
+    <p>For site verification only. Final work authorization remains subject to PTW, site supervisor approval, equipment condition, and banksman arrangement.</p>
+  </footer>
+
+  <script src="staff-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

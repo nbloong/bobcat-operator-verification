@@ -1,0 +1,40 @@
+const staffData = [
+  {
+    id: "BBE-BO-001",
+    name: "Gokul",
+    company: "Bryan Boiler Engineering Pte Ltd",
+    role: "Bobcat Operator",
+    equipment: "Bobcat / Skid Steer Loader",
+    trainingName: "External Bobcat Operator Training",
+    trainingType: "External",
+    validityType: "No Expiry",
+    trainingDate: "2024-01-15",
+    expiry: null,
+    refresherRequired: "Company review only",
+    banksmanRequired: "Yes",
+    ptwRequired: "Yes",
+    authorizationStatus: "Authorized",
+    certificateLink: "",
+    photo: "photos/gokul.jpg",
+    remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
+  },
+  {
+    id: "BBE-BO-002",
+    name: "Suman",
+    company: "Bryan Boiler Engineering Pte Ltd",
+    role: "Bobcat Operator",
+    equipment: "Bobcat / Skid Steer Loader",
+    trainingName: "External Bobcat Operator Training",
+    trainingType: "External",
+    validityType: "No Expiry",
+    trainingDate: "2024-01-15",
+    expiry: null,
+    refresherRequired: "Company review only",
+    banksmanRequired: "Yes",
+    ptwRequired: "Yes",
+    authorizationStatus: "Authorized",
+    certificateLink: "",
+    photo: "photos/suman.jpg",
+    remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
+  }
+];
