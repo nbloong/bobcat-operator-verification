@@ -14,7 +14,7 @@ const staffData = [
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
     authorizationStatus: "Authorized",
-    certificateLink: "",
+    certificateLink: "certs/gokul.pdf",
     photo: "photos/gokul.jpg",
     remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
   },
@@ -33,7 +33,7 @@ const staffData = [
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
     authorizationStatus: "Authorized",
-    certificateLink: "",
+    certificateLink: "certs/suman.pdf",
     photo: "photos/suman.jpg",
     remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
   }
