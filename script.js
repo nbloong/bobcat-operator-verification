@@ -80,8 +80,8 @@ function renderOperator(staff) {
   const status = getStatus(staff);
 
   const validityDisplay = staff.validityYears
-    ? `Company Controlled (${staff.validityYears} years)`
-    : safeValue(staff.validityType);
+  ? `${safeValue(staff.validityType)}`
+  : safeValue(staff.validityType);
 
   const expiryDisplay = status.expiry
     ? formatDate(status.expiry)
