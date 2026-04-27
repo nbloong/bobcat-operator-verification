@@ -39,7 +39,7 @@ const staffData = [
   },
   {
   id: "BBE-FL-001",
-  name: "Example Forklift Operator",
+  name: "Lim Seng Leong",
   company: "Bryan Boiler Engineering Pte Ltd",
   role: "Forklift Operator",
   equipment: "Forklift",
@@ -49,7 +49,7 @@ const staffData = [
   trainingDate: "2024-04-19",
   expiry: null,
   refresherRequired: "Company review only",
-  banksmanRequired: "As required by site condition",
+  banksmanRequired: "Required during reversing / blind spot / congested area",
   ptwRequired: "As required by site",
   authorizationStatus: "Authorized",
   certificateLink: "certs/leong_forklift.pdf",
