@@ -1,51 +1,44 @@
-# Bobcat Operator Verification System
+# Equipment Operator Verification System
 
-This is a simple GitHub Pages system for Bobcat operator verification.
+This is a GitHub Pages-based verification system used to check operator competency, training, certificate evidence, and authorization status before allowing equipment operation on site.
 
-## Files
+## Purpose
 
-- `index.html` - main webpage
-- `style.css` - webpage design
-- `script.js` - search and validity logic
-- `staff-data.js` - operator data
-- `photos/` - operator photos
+This system helps to:
 
-## How to upload photos
+- Verify operator identity with photo
+- Confirm training and certification
+- Check validity status: expiry or no expiry
+- Confirm site authorization
+- Support WSH / audit compliance
 
-Upload these files into the `photos` folder:
+## Supported Equipment
 
-- `gokul.jpg`
-- `suman.jpg`
+This system can support:
 
-File names must match the values inside `staff-data.js`.
+- Bobcat / Skid Steer Loader
+- Forklift
+- MEWP
+- Rigger / Signalman
+- Other trained personnel
 
-## How to use
-
-Search by:
-
-- `BBE-BO-001`
-- `BBE-BO-002`
-- `Gokul`
-- `Suman`
-
-## QR link format
-
-After GitHub Pages is active, use this format:
+## File Structure
 
 ```text
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/?id=BBE-BO-001
-```
-
-and
-
-```text
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/?id=BBE-BO-002
-```
-
-You can convert those links into QR codes later.
-
-## Important
-
-This system is static. It does not upload data automatically.
-To update staff records, edit `staff-data.js`.
-To update photos, replace the photo files inside the `photos` folder.
+bobcat-operator-verification/
+│
+├── index.html
+├── style.css
+├── script.js
+├── staff-data.js
+├── README.md
+│
+├── photos/
+│   ├── gokul.jpg
+│   ├── suman.jpg
+│   └── forklift-operator.jpg
+│
+└── certs/
+    ├── gokul.pdf
+    ├── suman.pdf
+    └── forklift-operator.pdf
