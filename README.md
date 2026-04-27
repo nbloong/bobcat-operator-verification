@@ -42,3 +42,10 @@ bobcat-operator-verification/
     ├── gokul.pdf
     ├── suman.pdf
     └── forklift-operator.pdf
+##QR Code Verification Links
+````text
+Bobcat Operator
+https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-001
+https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-002
+Forklift Operator
+https://nbloong.github.io/bobcat-operator-verification/?id=BBE-FL-001
