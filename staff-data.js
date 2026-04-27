@@ -71,7 +71,7 @@ const staffData = [
   banksmanRequired: "Required during reversing / blind spot / congested area",
   ptwRequired: "As required by site",
   authorizationStatus: "Authorized",
-  certificateLink: "certs/leong_forklift.pdf",
+  certificateLink: "certs/karuppaiah_forklift.pdf",
   photo: "photos/karuppaiah_forklift.jpg",
   remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
 }
