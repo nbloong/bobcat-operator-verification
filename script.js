@@ -47,7 +47,7 @@ function renderOperator(staff) {
   const status = getStatus(staff);
   const expiryDisplay = !staff.expiry || staff.expiry === "N/A" ? "No Expiry / Lifetime unless provider or company policy states otherwise" : staff.expiry;
   const cert = staff.certificateLink
-    ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">Open Certificate</a>`
+    ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">View Certificate</a>`
     : `<span class="cert-link">Certificate link: N.A.</span>`;
 
   return `
