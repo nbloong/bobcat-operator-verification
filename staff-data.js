@@ -55,5 +55,24 @@ const staffData = [
   certificateLink: "certs/leong_forklift.pdf",
   photo: "photos/leong_forklift.jpg",
   remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
+},
+  {
+  id: "BBE-FL-002",
+  name: "Ramachandran Karuppaiah",
+  company: "Bryan Boiler Engineering Pte Ltd",
+  role: "Forklift Operator",
+  equipment: "Forklift",
+  trainingName: "Forklift Operator Training",
+  trainingType: "External",
+  validityType: "Company Controlled",
+  trainingDate: "2025-10-18",
+  validityYears: 3,
+  refresherRequired: "Yes (every 3 years)",
+  banksmanRequired: "Required during reversing / blind spot / congested area",
+  ptwRequired: "As required by site",
+  authorizationStatus: "Authorized",
+  certificateLink: "certs/leong_forklift.pdf",
+  photo: "photos/karuppaiah_forklift.jpg",
+  remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
 }
 ];
