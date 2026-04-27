@@ -45,16 +45,16 @@ const staffData = [
   equipment: "Forklift",
   trainingName: "Forklift Operator Training",
   trainingType: "External",
-  validityType: "Company Controlled",
+  validityType: "Mandatory External Refresher (3 Years)",
   trainingDate: "2024-04-19",
   validityYears: 3,
-  refresherRequired: "Yes (every 3 years)",
+  refresherRequired: "Yes - mandatory external refresher every 3 years",
   banksmanRequired: "Required during reversing / blind spot / congested area",
   ptwRequired: "As required by site",
   authorizationStatus: "Authorized",
   certificateLink: "certs/leong_forklift.pdf",
   photo: "photos/leong_forklift.jpg",
-  remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
+  remarks: "Forklift operation requires mandatory external refresher training every 3 years. Operator must hold valid certification. Subject to site authorization, valid PTW, equipment inspection and banksman control where required."
 },
 {
   id: "BBE-FL-002",
@@ -64,15 +64,15 @@ const staffData = [
   equipment: "Forklift",
   trainingName: "Forklift Operator Training",
   trainingType: "External",
-  validityType: "Company Controlled",
+  validityType: "Mandatory External Refresher (3 Years)",
   trainingDate: "2025-10-18",
   validityYears: 3,
-  refresherRequired: "Yes (every 3 years)",
+  refresherRequired: "Yes - mandatory external refresher every 3 years",
   banksmanRequired: "Required during reversing / blind spot / congested area",
   ptwRequired: "As required by site",
   authorizationStatus: "Authorized",
   certificateLink: "certs/karuppaiah_forklift.pdf",
   photo: "photos/karuppaiah_forklift.jpg",
-  remarks: "External forklift training has no stated expiry. Validity is controlled internally by company policy. Operator remains subject to site authorization and equipment inspection."
+  remarks: "Forklift operation requires mandatory external refresher training every 3 years. Operator must hold valid certification. Subject to site authorization, valid PTW, equipment inspection and banksman control where required."
 }
 ];
