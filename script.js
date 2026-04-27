@@ -5,14 +5,40 @@ function getStatus(staff) {
   if (staff.authorizationStatus !== "Authorized") {
     return {
       text: "NOT CLEARED - NOT AUTHORIZED",
-      css: "expired"
+      css: "expired",
+      expiry: null
     };
   }
 
-  if (!staff.expiry || staff.expiry === "N/A") {
+  // Company-controlled validity: trainingDate + validityYears
+  if (staff.trainingDate && staff.validityYears) {
+    const trainingDate = new Date(staff.trainingDate);
+    const expiryDate = new Date(trainingDate);
+
+    expiryDate.setFullYear(expiryDate.getFullYear() + staff.validityYears);
+    expiryDate.setHours(0, 0, 0, 0);
+
+    if (expiryDate >= today) {
+      return {
+        text: "CLEARED TO WORK",
+        css: "valid",
+        expiry: expiryDate
+      };
+    }
+
+    return {
+      text: "NOT CLEARED - REFRESHER REQUIRED",
+      css: "expired",
+      expiry: expiryDate
+    };
+  }
+
+  // True no-expiry training
+  if (!staff.expiry || staff.expiry === "N/A" || staff.expiry === "N.A.") {
     return {
       text: "CLEARED TO WORK - TRAINING HAS NO EXPIRY",
-      css: "valid"
+      css: "valid",
+      expiry: null
     };
   }
 
@@ -22,20 +48,23 @@ function getStatus(staff) {
   if (isNaN(expiryDate)) {
     return {
       text: "REVIEW REQUIRED - INVALID EXPIRY DATE",
-      css: "review"
+      css: "review",
+      expiry: null
     };
   }
 
   if (expiryDate >= today) {
     return {
       text: "CLEARED TO WORK",
-      css: "valid"
+      css: "valid",
+      expiry: expiryDate
     };
   }
 
   return {
     text: "NOT CLEARED - TRAINING EXPIRED",
-    css: "expired"
+    css: "expired",
+    expiry: expiryDate
   };
 }
 
@@ -43,17 +72,30 @@ function safeValue(value) {
   return value === null || value === undefined || value === "" ? "N.A." : value;
 }
 
+function formatDate(date) {
+  return date.toISOString().split("T")[0];
+}
+
 function renderOperator(staff) {
   const status = getStatus(staff);
-  const expiryDisplay = !staff.expiry || staff.expiry === "N/A" ? "No Expiry / Lifetime unless provider or company policy states otherwise" : staff.expiry;
+
+  const validityDisplay = staff.validityYears
+    ? `Company Controlled (${staff.validityYears} years)`
+    : safeValue(staff.validityType);
+
+  const expiryDisplay = status.expiry
+    ? formatDate(status.expiry)
+    : "No Expiry / Lifetime unless provider or company policy states otherwise";
+
   const cert = staff.certificateLink
-    ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">View Certificate</a>`
-    : `<span class="cert-link">Certificate link: N.A.</span>`;
+    ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">📄 View Certificate</a>`
+    : `<span class="cert-link">Certificate: N.A.</span>`;
 
   return `
     <article class="card ${status.css}">
       <div class="profile">
         <img src="${staff.photo}" alt="${staff.name} photo" onerror="this.src='photos/no-photo.png';" />
+
         <div>
           <h3>${staff.name}</h3>
           <p>${staff.id}</p>
@@ -61,7 +103,9 @@ function renderOperator(staff) {
         </div>
       </div>
 
-      <div class="status ${status.css}">${status.text}</div>
+      <div class="status ${status.css}">
+        ${status.text}
+      </div>
 
       <table class="details">
         <tr><td>Company</td><td>${safeValue(staff.company)}</td></tr>
@@ -69,7 +113,7 @@ function renderOperator(staff) {
         <tr><td>Training</td><td>${safeValue(staff.trainingName)}</td></tr>
         <tr><td>Training Type</td><td>${safeValue(staff.trainingType)}</td></tr>
         <tr><td>Training Date</td><td>${safeValue(staff.trainingDate)}</td></tr>
-        <tr><td>Validity Type</td><td>${safeValue(staff.validityType)}</td></tr>
+        <tr><td>Validity Type</td><td>${validityDisplay}</td></tr>
         <tr><td>Expiry</td><td>${expiryDisplay}</td></tr>
         <tr><td>Refresher Required</td><td>${safeValue(staff.refresherRequired)}</td></tr>
         <tr><td>Banksman Required</td><td>${safeValue(staff.banksmanRequired)}</td></tr>
@@ -80,7 +124,10 @@ function renderOperator(staff) {
       ${cert}
 
       <div class="warning">
-        <b>Site Control Reminder:</b> Bobcat operation must be carried out on designated route only, with banksman guidance and valid PTW where required.
+        <b>Site Control Reminder:</b>
+        Equipment operation must be carried out by authorised operators only,
+        on approved route / work area, with banksman guidance where required,
+        and valid PTW where applicable.
       </div>
 
       <p><b>Remarks:</b> ${safeValue(staff.remarks)}</p>
@@ -99,7 +146,9 @@ function searchOperator() {
 
   const matches = staffData.filter(staff =>
     staff.id.toLowerCase().includes(input) ||
-    staff.name.toLowerCase().includes(input)
+    staff.name.toLowerCase().includes(input) ||
+    staff.role.toLowerCase().includes(input) ||
+    staff.equipment.toLowerCase().includes(input)
   );
 
   if (matches.length === 0) {
