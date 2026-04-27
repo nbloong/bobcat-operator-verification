@@ -56,7 +56,7 @@ const staffData = [
   photo: "photos/leong_forklift.jpg",
   remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
 },
-  {
+{
   id: "BBE-FL-002",
   name: "Ramachandran Karuppaiah",
   company: "Bryan Boiler Engineering Pte Ltd",
@@ -73,6 +73,6 @@ const staffData = [
   authorizationStatus: "Authorized",
   certificateLink: "certs/karuppaiah_forklift.pdf",
   photo: "photos/karuppaiah_forklift.jpg",
-  remarks: "External training certificate has no stated expiry. Operator remains subject to site authorization and equipment inspection."
+  remarks: "External forklift training has no stated expiry. Validity is controlled internally by company policy. Operator remains subject to site authorization and equipment inspection."
 }
 ];
