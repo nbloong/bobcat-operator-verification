@@ -47,7 +47,7 @@ const staffData = [
   trainingType: "External",
   validityType: "Company Controlled",
   trainingDate: "2024-04-19",
-  ValidityYears: 3,
+  validityYears: 3,
   refresherRequired: "Yes (every 3 years)",
   banksmanRequired: "Required during reversing / blind spot / congested area",
   ptwRequired: "As required by site",
