@@ -102,7 +102,9 @@ function renderOperator(staff) {
     ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">📄 View Certificate</a>`
     : staff.trainingEvidenceVerified === false
       ? `<span class="cert-link">Training Certificate: Pending Upload / Verification</span>`
-      : `<span class="cert-link">Certificate: N.A.</span>`;
+      : staff.trainingEvidenceVerified === true
+        ? `<span class="cert-link">✓ Training Certificate: Verified on File${staff.certificateReference ? ` (${staff.certificateReference})` : ""}</span>`
+        : `<span class="cert-link">Certificate: N.A.</span>`;
 
   return `
     <article class="card ${status.css}">
