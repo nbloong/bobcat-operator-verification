@@ -80,7 +80,7 @@ const staffData = [
     authorizationStatus: "Authorized",
     trainingEvidenceVerified: true,
     certificateLink: "certs/ISLAM RASHEDUL- MUSTANG.pdf",
-    photo: "photos/no-photo.png",
+    photo: "photos/rashedul.png",
     remarks: "External skid steer loader training certificate has no stated expiry. Company Bobcat operator appointment effective 08 Jan 2026 is on file. Operator remains subject to site authorization, PTW, equipment inspection and banksman control."
   },
   {
