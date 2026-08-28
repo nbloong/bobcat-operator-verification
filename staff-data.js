@@ -57,7 +57,7 @@ const staffData = [
     ptwRequired: "Yes",
     authorizationStatus: "Authorized",
     trainingEvidenceVerified: true,
-    certificateLink: "certificate.html?id=BBE-BO-003",
+    certificateLink: "certs/LIM SENG LEONG- BOBCAT.pdf",
     photo: "photos/leong_forklift.jpg",
     remarks: "External Bobcat training certificate has no stated expiry. Company Bobcat operator appointment effective 08 Jan 2026 is on file. Operator remains subject to site authorization, PTW, equipment inspection and banksman control."
   },
@@ -79,7 +79,7 @@ const staffData = [
     ptwRequired: "Yes",
     authorizationStatus: "Authorized",
     trainingEvidenceVerified: true,
-    certificateLink: "certificate.html?id=BBE-BO-004",
+    certificateLink: "certs/ISLAM RASHEDUL- MUSTANG.pdf",
     photo: "photos/no-photo.png",
     remarks: "External skid steer loader training certificate has no stated expiry. Company Bobcat operator appointment effective 08 Jan 2026 is on file. Operator remains subject to site authorization, PTW, equipment inspection and banksman control."
   },
