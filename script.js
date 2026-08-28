@@ -10,6 +10,15 @@ function getStatus(staff) {
     };
   }
 
+  // Do not treat an appointment record as proof of training competency.
+  if (staff.trainingEvidenceVerified === false) {
+    return {
+      text: "APPOINTED - TRAINING CERTIFICATE PENDING VERIFICATION",
+      css: "review",
+      expiry: null
+    };
+  }
+
   // Company-controlled validity: trainingDate + validityYears
   if (staff.trainingDate && staff.validityYears) {
     const trainingDate = new Date(staff.trainingDate);
@@ -80,16 +89,20 @@ function renderOperator(staff) {
   const status = getStatus(staff);
 
   const validityDisplay = staff.validityYears
-  ? `${safeValue(staff.validityType)}`
-  : safeValue(staff.validityType);
+    ? `${safeValue(staff.validityType)}`
+    : safeValue(staff.validityType);
 
-  const expiryDisplay = status.expiry
-    ? formatDate(status.expiry)
-    : "No Expiry / Lifetime unless provider or company policy states otherwise";
+  const expiryDisplay = staff.trainingEvidenceVerified === false
+    ? "Pending training certificate verification"
+    : status.expiry
+      ? formatDate(status.expiry)
+      : "No Expiry / Lifetime unless provider or company policy states otherwise";
 
   const cert = staff.certificateLink
     ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">📄 View Certificate</a>`
-    : `<span class="cert-link">Certificate: N.A.</span>`;
+    : staff.trainingEvidenceVerified === false
+      ? `<span class="cert-link">Training Certificate: Pending Upload / Verification</span>`
+      : `<span class="cert-link">Certificate: N.A.</span>`;
 
   return `
     <article class="card ${status.css}">
@@ -113,6 +126,9 @@ function renderOperator(staff) {
         <tr><td>Training</td><td>${safeValue(staff.trainingName)}</td></tr>
         <tr><td>Training Type</td><td>${safeValue(staff.trainingType)}</td></tr>
         <tr><td>Training Date</td><td>${safeValue(staff.trainingDate)}</td></tr>
+        <tr><td>Training Evidence</td><td>${staff.trainingEvidenceVerified === false ? "Pending Verification" : "Verified"}</td></tr>
+        <tr><td>Appointment Date</td><td>${safeValue(staff.appointmentDate)}</td></tr>
+        <tr><td>Appointment Status</td><td>${safeValue(staff.appointmentStatus)}</td></tr>
         <tr><td>Validity Type</td><td>${validityDisplay}</td></tr>
         <tr><td>Expiry</td><td>${expiryDisplay}</td></tr>
         <tr><td>Refresher Required</td><td>${safeValue(staff.refresherRequired)}</td></tr>
