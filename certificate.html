@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBE Training Certificate</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1f2933}.top{background:#0f172a;color:#fff;padding:18px 22px}.top h1{margin:0;font-size:22px}.top p{margin:5px 0 0;color:#cbd5e1}.wrap{max-width:980px;margin:22px auto;padding:0 16px}.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(15,23,42,.08);text-align:center}.status{display:inline-block;background:#dcfce7;color:#166534;font-weight:bold;padding:9px 14px;border-radius:999px;margin-bottom:16px}.viewer{min-height:420px;display:flex;align-items:center;justify-content:center;overflow:auto;background:#eef2f6;border:1px solid #dbe3ea;border-radius:12px;padding:18px}.viewer img{max-width:100%;height:auto;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.15)}.viewer img.rotate{transform:rotate(180deg)}.note{font-size:13px;color:#64748b;margin-top:14px}.back{display:inline-block;margin-top:16px;text-decoration:none;background:#2563eb;color:#fff;padding:10px 15px;border-radius:9px;font-weight:bold}@media(max-width:600px){.viewer{min-height:300px;padding:8px}.top h1{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="top"><h1>BRYAN BOILER ENGINEERING PTE LTD</h1><p>Bobcat Operator Training Certificate — Read-only Verification</p></div>
+<div class="wrap"><div class="card">
+<div class="status">TRAINING CERTIFICATE ON FILE</div>
+<h2 id="name">Certificate</h2>
+<div class="viewer"><img id="cert" alt="Training certificate"></div>
+<p class="note">Displayed for operator competency verification. Original certificate remains the controlling training record.</p>
+<a class="back" href="javascript:history.back()">Back to Operator Verification</a>
+</div></div>
+<script>
+const id=(new URLSearchParams(location.search).get('id')||'').toUpperCase();
+const records={
+ 'BBE-BO-003':{name:'Lim Seng Leong',src:'certs/lim_bobcat.jpg',rotate:true},
+ 'BBE-BO-004':{name:'Rashedul Islam Shamsul Haque',src:'certs/rashedul_bobcat.jpg',rotate:false}
+};
+const r=records[id];
+if(r){document.getElementById('name').textContent=r.name+' — '+id;const im=document.getElementById('cert');im.src=r.src;if(r.rotate)im.classList.add('rotate');}
+else{document.getElementById('name').textContent='Certificate record unavailable';document.getElementById('cert').style.display='none';}
+</script>
+</body>
+</html>
