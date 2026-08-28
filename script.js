@@ -42,10 +42,10 @@ function getStatus(staff) {
     };
   }
 
-  // True no-expiry training
+  // Certificate has no stated expiry date; this is not the same as guaranteeing lifetime validity.
   if (!staff.expiry || staff.expiry === "N/A" || staff.expiry === "N.A.") {
     return {
-      text: "CLEARED TO WORK - TRAINING HAS NO EXPIRY",
+      text: "CLEARED TO WORK - NO EXPIRY STATED ON CERTIFICATE",
       css: "valid",
       expiry: null
     };
@@ -96,7 +96,7 @@ function renderOperator(staff) {
     ? "Pending training certificate verification"
     : status.expiry
       ? formatDate(status.expiry)
-      : "No Expiry / Lifetime unless provider or company policy states otherwise";
+      : "No expiry date stated on certificate / subject to company, site or training-provider review";
 
   const cert = staff.certificateLink
     ? `<a class="cert-link" href="${staff.certificateLink}" target="_blank">📄 View Certificate</a>`
