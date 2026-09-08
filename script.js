@@ -10,6 +10,28 @@ function getStatus(staff) {
     };
   }
 
+  // A valid operator record must not remain cleared after the person's work pass expires.
+  if (staff.workPassExpiry) {
+    const workPassExpiry = new Date(staff.workPassExpiry);
+    workPassExpiry.setHours(0, 0, 0, 0);
+
+    if (isNaN(workPassExpiry)) {
+      return {
+        text: "REVIEW REQUIRED - INVALID WORK PASS EXPIRY DATE",
+        css: "review",
+        expiry: null
+      };
+    }
+
+    if (workPassExpiry < today) {
+      return {
+        text: "NOT CLEARED - WORK PASS EXPIRED",
+        css: "expired",
+        expiry: null
+      };
+    }
+  }
+
   // Do not treat an appointment record as proof of training competency.
   if (staff.trainingEvidenceVerified === false) {
     return {
@@ -124,6 +146,8 @@ function renderOperator(staff) {
 
       <table class="details">
         <tr><td>Company</td><td>${safeValue(staff.company)}</td></tr>
+        ${staff.workPassType ? `<tr><td>Work Pass Type</td><td>${safeValue(staff.workPassType)}</td></tr>` : ""}
+        ${staff.workPassExpiry ? `<tr><td>Work Pass Valid Until</td><td>${safeValue(staff.workPassExpiry)}</td></tr>` : ""}
         <tr><td>Equipment</td><td>${safeValue(staff.equipment)}</td></tr>
         <tr><td>Training</td><td>${safeValue(staff.trainingName)}</td></tr>
         <tr><td>Training Type</td><td>${safeValue(staff.trainingType)}</td></tr>
