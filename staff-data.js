@@ -134,6 +134,8 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: null,
     expiry: null,
+    appointmentDate: "2026-09-08",
+    appointmentStatus: "Appointed",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
@@ -141,7 +143,7 @@ const staffData = [
     trainingEvidenceVerified: true,
     certificateLink: "certs/KALIYAMOORTHY ARAVINTH - BOBCAT.pdf",
     photo: "photos/Kaliyamoorthy Aravinth.png",
-    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Company Bobcat operator appointment effective 08 Sep 2026 is on file. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
   },
   {
     id: "BBE-BO-006",
@@ -154,6 +156,8 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: null,
     expiry: null,
+    appointmentDate: "2026-09-08",
+    appointmentStatus: "Appointed",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
@@ -161,7 +165,7 @@ const staffData = [
     trainingEvidenceVerified: true,
     certificateLink: "certs/SHEK AMIR - BOBCAT.pdf",
     photo: "photos/Shek Amir.png",
-    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Company Bobcat operator appointment effective 08 Sep 2026 is on file. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
   },
   {
     id: "BBE-BO-007",
@@ -174,6 +178,8 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: null,
     expiry: null,
+    appointmentDate: "2026-09-08",
+    appointmentStatus: "Appointed",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
@@ -181,7 +187,7 @@ const staffData = [
     trainingEvidenceVerified: true,
     certificateLink: "certs/RAJENDRAN GOPI - BOBCAT.pdf",
     photo: "photos/Rajendran Gopi.png",
-    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Company Bobcat operator appointment effective 08 Sep 2026 is on file. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
   },
   {
     id: "BBE-BO-008",
@@ -194,6 +200,8 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: null,
     expiry: null,
+    appointmentDate: "2026-09-08",
+    appointmentStatus: "Appointed",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
@@ -201,6 +209,6 @@ const staffData = [
     trainingEvidenceVerified: true,
     certificateLink: "certs/MURUGESAN PARTHIBAN - BOBCAT.pdf",
     photo: "photos/murugesan parthiban.png",
-    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External Bobcat operator training certificate is on file. No expiry date is recorded in this register. Company Bobcat operator appointment effective 08 Sep 2026 is on file. Operator remains subject to company and site authorization, PTW, equipment inspection and banksman control."
   }
 ];
