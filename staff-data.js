@@ -10,14 +10,16 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: "2025-05-22",
     expiry: null,
+    appointmentStatus: "Revoked",
+    revocationDate: "2026-09-08",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
-    authorizationStatus: "Authorized",
+    authorizationStatus: "Not Authorized",
     trainingEvidenceVerified: true,
     certificateLink: "certs/gokul.pdf",
     photo: "photos/gokul.jpg",
-    remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External training certificate remains on file for record purposes. Company Bobcat operator appointment revoked effective 08 Sep 2026. Operator is not authorized to operate company equipment."
   },
   {
     id: "BBE-BO-002",
@@ -30,14 +32,16 @@ const staffData = [
     validityType: "No Expiry",
     trainingDate: "2025-05-22",
     expiry: null,
+    appointmentStatus: "Revoked",
+    revocationDate: "2026-09-08",
     refresherRequired: "Company review only",
     banksmanRequired: "Yes",
     ptwRequired: "Yes",
-    authorizationStatus: "Authorized",
+    authorizationStatus: "Not Authorized",
     trainingEvidenceVerified: true,
     certificateLink: "certs/suman.pdf",
     photo: "photos/suman.jpg",
-    remarks: "External training certificate has no stated expiry. Operator still subject to site authorization, PTW, equipment inspection and banksman control."
+    remarks: "External training certificate remains on file for record purposes. Company Bobcat operator appointment revoked effective 08 Sep 2026. Operator is not authorized to operate company equipment."
   },
   {
     id: "BBE-BO-003",
