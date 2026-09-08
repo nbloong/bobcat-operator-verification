@@ -2,6 +2,14 @@ function getStatus(staff) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
+  if (staff.appointmentStatus === "Revoked") {
+    return {
+      text: "NOT CLEARED - APPOINTMENT REVOKED",
+      css: "expired",
+      expiry: null
+    };
+  }
+
   if (staff.authorizationStatus !== "Authorized") {
     return {
       text: "NOT CLEARED - NOT AUTHORIZED",
@@ -131,6 +139,7 @@ function renderOperator(staff) {
         <tr><td>Training Evidence</td><td>${staff.trainingEvidenceVerified === false ? "Pending Verification" : "Verified"}</td></tr>
         <tr><td>Appointment Date</td><td>${safeValue(staff.appointmentDate)}</td></tr>
         <tr><td>Appointment Status</td><td>${safeValue(staff.appointmentStatus)}</td></tr>
+        ${staff.revocationDate ? "<tr><td>Revocation Date</td><td>" + safeValue(staff.revocationDate) + "</td></tr>" : ""}
         <tr><td>Validity Type</td><td>${validityDisplay}</td></tr>
         <tr><td>Expiry</td><td>${expiryDisplay}</td></tr>
         <tr><td>Refresher Required</td><td>${safeValue(staff.refresherRequired)}</td></tr>
