@@ -45,8 +45,30 @@ bobcat-operator-verification/
 
 QR Code Verification Links
 
-Bobcat Operator
-https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-001
-https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-002
-Forklift Operator
-https://nbloong.github.io/bobcat-operator-verification/?id=BBE-FL-001
+Bobcat Operators
+
+- BBE-BO-001 — Gokul  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-001
+- BBE-BO-002 — Suman  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-002
+- BBE-BO-003 — Lim Seng Leong  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-003
+- BBE-BO-004 — Rashedul Islam Shamsul Haque  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-004
+- BBE-BO-005 — Kaliyamoorthy Aravinth  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-005
+- BBE-BO-006 — Shek Amir  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-006
+- BBE-BO-007 — Rajendran Gopi  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-007
+- BBE-BO-008 — Murugesan Parthiban  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-BO-008
+
+Forklift Operators
+
+- BBE-FL-001 — Lim Seng Leong  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-FL-001
+- BBE-FL-002 — Ramachandran Karuppaiah  
+  https://nbloong.github.io/bobcat-operator-verification/?id=BBE-FL-002
+
+Printable QR files for the four newest Bobcat operators are stored in the `qrcodes/` folder.
